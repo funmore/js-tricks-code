@@ -1,0 +1,55 @@
+// function DeepCopy(source){
+//     const targetObj = source.constructor === Array? []:{}
+//     for(let keys in source){
+//         if(source.hasOwnProperty(keys)){
+//             if(source[keys]&&typeof targetObj[keys] ==='object'){
+//                 targetObj[keys] = source[keys].constructor === Array ?[]: { }
+//                 targetObj[keys] = DeepCopy(source[keys])
+//             }else{
+//                 targetObj[keys] = source[keys]
+//             }
+//         }
+//     }
+//     return targetObj
+// }
+
+function deepCopyJson(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
+function deepCopyVue (obj, cache = []) {
+
+    function find (list, f) {
+      return list.filter(f)[0]
+    }
+  
+    // just return if obj is immutable value
+    if (obj === null || typeof obj !== 'object') {
+      return obj
+    }
+  
+    // if obj is hit, it is in circular structure
+    const hit = find(cache, c => c.original === obj)
+    if (hit) {
+      return hit.copy
+    }
+  
+    const copy = Array.isArray(obj) ? [] : {}
+    // put the copy into cache at first
+    // because we want to refer it in recursive deepCopy
+    cache.push({
+      original: obj,
+      copy
+    })
+  
+    Object.keys(obj).forEach(key => {
+      copy[key] = deepCopyVue(obj[key], cache)
+    })
+  
+    return copy
+  }
+var s = {obj1:1,x:3}
+var t =  deepCopyVue(s)
+t.obj1.a=132
+console.log(s)
+console.log(t)
