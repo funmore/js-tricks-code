@@ -1,8 +1,9 @@
-function Promise(exector){
-    let self = this;
+function Promise(exector,name){
+    let self = this
     this.status = 'pending';
     this.value =undefined;
     this.reason = undefined;
+    this.name = name
 
     this.onResolvedCallbacks = []
     this.onRejectedCallbacks = []
@@ -38,6 +39,7 @@ function Promise(exector){
 Promise.prototype.then = function (onFulfilled, onRejected){
     let self = this;
     let promise2 = new Promise((resolve, reject)=>{
+        var a=1;
         function resolvePromise(promise2,x,resolve, reject){
             if(promise2 === x){
                 return reject(new TypeError("chaining cycle"))
@@ -112,20 +114,20 @@ Promise.prototype.then = function (onFulfilled, onRejected){
 }
 let promise = new Promise((resolve, reject)=>{
     setTimeout(()=>{
-        resolve('success')
+        resolve('out resovlve')
         // if(Math.random()>0.5){
         //     resolve('success')
         // }else{
         //     reject('error')
         // }
     },2000)
-})
+},'first promise')
 
 promise.then((data)=>{
     return new Promise((resolve,reject)=>{
-        console.log("first")
+        console.log("then resolve")
         resolve("then success")
-    })
+    },'then')
 },err => {
     console.log(err)
 })

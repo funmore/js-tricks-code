@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            min-width:550px;
+        }
+        #warper{
+            height: 800px;
+            
+            padding-left: 200px;
+            padding-right: 150px;
+            
+        }
+        #warper div{
+            float:left;
+        }
+        #center{
+            height:100%;
+            width:100%;
+            background-color:red;
+        }
+        #left{
+            height:100%;
+            width:200px;
+            position:relative;
+            right:200px;
+            margin-left:-100%;
+            background-color:blue;
+        }
+        #right{
+            height:100%;
+            width:150px;
+            margin-right:-100%;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <div ID="warper">
+        <div id="center"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+</body>
+</html>

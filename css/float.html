@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #grandfather{
+            height: 400px;
+            width: 1600px;
+            background-color: bisque;
+            position: relative;
+            top: 100px;
+            left:200px;
+            
+        }
+        .column{
+            float:left;
+            color: dodgerblue
+        }
+        #father{
+            height: 200px;
+            width: 800px;
+            background-color: grey;
+            position: relative;
+            top: 100px;
+            left:100px;
+        }
+        #green{
+            background-color: green;
+            height: 50px;
+            width: 50px;
+            margin-left: -100%;
+            position: relative;
+            right:50px;
+            /* margin-left: 100%; */
+            /* position: relative;
+            right: 100px */
+        }
+        #red {
+            background-color: red;
+            height: 50px;
+            width: 100%;
+
+        }
+        #black {
+            background-color: black;
+            height: 50px;
+            width: 50px;
+            margin-right: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="grandfather">
+        <div id="father">
+            <div class="column" id="red">red</div>
+            <div class="column" id="green">green</div>
+
+            <div class="column" id="black">black</div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

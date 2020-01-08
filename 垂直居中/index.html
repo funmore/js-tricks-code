@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 利用绝对定位和负margin */
+        /* #out{
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+            
+        }
+        #inner{
+            width: 100px;
+
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        } */
+        /* 使用绝对定位和tranform */
+        /* #out{
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+            
+        }
+        #inner{
+            width: 100px;
+
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate3d(-50%, -50%, 0);
+
+        } */
+        /* 使用绝对定位和calc */
+        /* #out{
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+            
+        }
+        #inner{
+            width: 100px;
+
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top:calc(50%-50px);
+            left:calc(50%-50px);
+            
+
+        } */
+        /* 使用margin:auto属性 */
+        #out{
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+            
+        }
+        #inner{
+            width: 100px;
+
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div id="out">
+        <div id="inner"> </div>
+    </div>
+    
+</body>
+</html>

@@ -1,11 +1,16 @@
-// // // var original = Promise.resolve(33);
-// var cast = Promise.resolve(33);
-// cast.then(function(value) {
-//   console.log('value: ' + value);
-// });
+setTimeout(()=>{
+    console.log('settimeout')
+},0)
+var p1 = new Promise((resovle,reject)=>{
+    resovle();
+})
+p1.then(()=>{
+    console.log('then data')
+})
 
-// Promise.resolve("Success").then(function(value) {
-//     console.log(value); // "Success"
-//   }, function(value) {
-//     console.log('不会调用');
-//   });
+
+Promise.resolve().then(()=>{
+    console.log('Promise.resovle')
+})
+
+

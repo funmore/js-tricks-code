@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            -webkit-transform: translate(0, 0);
+            -webkit-transition: -webkit-transform 1000ms;
+
+            transform: translate(0, 0);
+            transition: transform 1000ms;
+        }
+
+        .box.move {
+            -webkit-transform: translate(50px, 50px);
+            transform: translate(50px, 50px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        dfafas
+    </div>
+    <button onclick="myclick()">button</button>
+    <script>
+        function myclick(){
+            var ele = document.getElementsByClassName('box')
+            for (i = 0; i < ele.length; i++) {
+                ele[i].classList.add('move');
+            }
+        }
+
+        var boxElement = document.querySelector('.box'); // 获取有 box 类的第一个元素。
+        boxElement.addEventListener('transitionend', onTransitionEnd, false);
+
+        function onTransitionEnd() {
+         alert('transmiton completed')
+        }
+
+    </script>
+    
+</body>
+</html>

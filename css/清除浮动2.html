@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+.topDiv {
+    width: 500px;
+    padding: 4px;
+    border: 2px solid black;
+
+    overflow: auto;
+}
+.floatDiv {
+    width: 100px;
+    height: 100px;
+    border: 2px dotted red;
+    color: red;
+    margin: 4px;
+    float: left;
+}
+.bottomDiv {
+    width: 500px;
+    height: 100px;
+    margin: 5px 0;
+    border: 2px dotted black;
+    clear: both;
+}
+.textDiv {
+    color: blue;
+    border: 2px solid blue;
+}
+
+    </style>
+</head>
+<body>
+        <div class="topDiv">
+                <div class="floatDiv">float left</div>
+                <div class="textDiv">...</div>
+            </div>
+            <div class="bottomDiv">...</div>
+</body>
+</html>

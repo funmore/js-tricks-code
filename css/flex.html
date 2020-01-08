@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            
+        }
+
+
+        #container1 {
+            border: solid red 1px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #container2 {
+            border: solid red 1px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #container3 {
+            border: solid red 1px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        #center {
+            /* height: 100px;
+            width:200px; */
+            border: solid black 1px;
+            margin: 2px 2px 2px 2px;
+            order:90;
+        }
+
+        #left{
+            margin: 2px 2px 2px 2px;
+            /* width :200px; */
+            border: solid red 1px;
+            order:1;
+        }
+        #right{
+            margin: 2px 2px 2px 2px;
+            /* width:200px; */
+            border: solid red 1px;
+            flex: 
+        }
+
+    </style>
+</head>
+<body>
+        <div id="container1" class="column">
+            <div id="center">center</div>
+        </div>
+        <div id="container2" class="column">
+                <div id="left">center</div>
+        </div>
+        <div id="container3" class="column">
+                <div id="right">center</div>
+        </div>
+
+</body>
+</html>
