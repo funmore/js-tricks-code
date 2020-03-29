@@ -4,7 +4,7 @@ async function func1(){
     // await funconce();
     console.log('1_after')
 }
-function funconce(){
+async function funconce(){
     console.log('once')
 }
 async function func2(){

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="move">
+          <img
+            onclick="moveBoxClick()"
+            class="small-img"
+            draggable="false"
+            src="https://zcy-cdn.oss-cn-shanghai.aliyuncs.com/f2e-assets/103bbf76-6248-421c-a3d6-28a525c459db.png"
+            alt=""
+          />
+          <img
+            onclick="moveBoxClick()"
+            class="magnify-img"
+            draggable="false"
+            src="https://zcy-cdn.oss-cn-shanghai.aliyuncs.com/f2e-assets/90e26f49-9824-4443-b4aa-8aa64a3c8690.png"
+            alt=""
+          />
+          <div class="content"></div>
+        </div>
+      </div>
+      <script> 
+            function moveBoxClick(){
+                const target = document.querySelector('.move');
+                const smallImg = document.querySelector('.small-img')
+                const magnifyImg = document.querySelector('.magnify-img')
+                if(!isMove){
+                    smallImg.style.display = "block";
+                    magnifyImg.style.display = "none";
+                    target.style.width = "32px"; 
+                }else{
+                    smallImg.style.display = "none";
+                    magnifyImg.style.display = "block";
+                    target.style.width = "130px";
+                }
+                isMove=!isMove
+            }
+
+      </script>
+      <!-- <script src="./tuozhuai.js"></script>       -->
+</body>
+</html>

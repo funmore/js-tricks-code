@@ -19,7 +19,7 @@ console.log( testInstance );
 var truck = new vehicle( "truck" );
 
 // New functionality we're decorating vehicle with
-truck.setModel = function( modelName ){
+truck.  = function( modelName ){
     this.model = modelName;
 };
 
