@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            display: flex;
+            background-color: cornsilk;
+            align-items: stretch;
+        } 
+        .father > div{
+            height: 40px;
+        }          
+        .father > div:first-child {
+                background-color: red;
+                font-family: PingFangSC-Regular !important;
+              font-size: 14px !important;
+              color: rgba(0,0,0,0.60) !important;
+              letter-spacing: 0 !important;
+              text-align: right !important;
+              line-height: 22px !important;
+            }
+        .father > div:last-child{
+            background-color: darkmagenta;
+        /* font-family: PingFangSC-Regular !important;
+              font-size: 14px !important;
+              color: rgba(0,0,0,0.60) !important;
+              letter-spacing: 0 !important;
+              text-align: right !important;
+              line-height: 22px !important; */
+        }
+        .father > div:last-child span{
+            background-color: cyan;
+            font-family: PingFangSC-Regular !important;
+              font-size: 14px !important;
+              color: rgba(0,0,0,0.60) !important;
+              letter-spacing: 0 !important;
+              text-align: right !important;
+              line-height: 22px !important;
+        }
+        .father2{
+            display: flex;
+            background-color: cornsilk;
+            align-items: stretch;
+            .son21 {
+                background-color: cyan;
+
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class='father'>
+        <div >你好你好你好</div>
+        <div><span>哈喽哈喽哈喽</span></div>
+    
+    </div>
+
+    <div class='father2'>
+        <span class="son21">你好你好你好</span>
+        <span class="son22"><span>哈喽哈喽哈喽</span></span>
+    
+    </div>
+
+</body>
+</html>
