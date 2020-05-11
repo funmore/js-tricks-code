@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper1{
+            height: 200px;
+            width: 400px;
+            background-color: blue;
+        }
+
+
+        .wrapper1 > *{
+            background-color: crimson;
+        }
+        .inside {
+            background-color: darkgreen !important;
+        }
+        .wrapper1 *{
+            background-color: cyan;
+        }
+        .wrapper22{
+            background-color:darksalmon;
+        }
+        .wrapper2{
+            margin-top: 100px;
+            height: 200px;
+            width: 400px;
+            background-color: blue;
+        }
+
+
+
+        .wrapper2 > *{
+            background-color: crimson;
+        }
+        .inside {
+            background-color: darkgreen !important;
+        }
+        .wrapper2 *{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class ="wrapper1">
+        <div>one</div>
+        <div>two</div>
+        <div>three<div>inside three</div></div>
+        <div>four <div class="inside">inside four</div></div>
+     </div>
+    </div>
+    <div class ="wrapper2 wrapper22" >
+        <div>one</div>
+        <div>two</div>
+        <div>three<div>inside three</div></div>
+        <div>four <div class="inside">inside four</div></div>
+     </div>
+    </div>
+</body>
+</html>
